@@ -1,0 +1,77 @@
+/* MultiSelectDropdown.css */
+.msd-outer {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+.msd-label {
+  display: block;
+  font-size: 1.09rem;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  color: #222;
+}
+.msd-button {
+  width: 100%;
+  background: #f2f4f8;
+  color: #253255;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1.11rem;
+  padding: 1.05rem 1.2rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1.5px 7px 0 rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+.msd-button:focus {
+  box-shadow: 0 0 0 2px #2563eb22;
+  outline: none;
+}
+.msd-value {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.msd-arrow {
+  margin-left: 0.7rem;
+  font-size: 1.2rem;
+  color: #6366f1;
+}
+.msd-menu {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  z-index: 25;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 28px 0 rgba(37,99,235,0.08), 0 1.5px 7px 0 rgba(0,0,0,0.04);
+  padding: 0.6rem 0;
+  margin-top: 0.3rem;
+  animation: msd-fade-in 0.18s;
+}
+@keyframes msd-fade-in {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: none;}
+}
+.msd-option {
+  cursor: pointer;
+  font-size: 1.09rem;
+  padding: 0.78rem 1.6rem;
+  display: flex;
+  align-items: center;
+  transition: background 0.12s, color 0.13s;
+  border: none;
+  border-radius: 1.1rem;
+  margin: 0.1rem 0.6rem;
+  user-select: none;
+}
+.msd-option:hover, .msd-option:focus {
+  background: #e0e7ff;
+  color: #2563eb;
+}

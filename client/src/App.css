@@ -1,0 +1,180 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Pro Display', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f6f8fa;
+}
+
+.main-card {
+  background: #fff;
+  margin: 24px auto;
+  padding: 2rem 1.2rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 32px 0 rgba(26,42,60,0.07), 0 1.5px 7px 0 rgba(0,0,0,0.03);
+  max-width: 410px;
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lobby-form, .lobby-list, .settings-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: center;
+}
+
+.lobby-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.4rem 0;
+  width: 100%;
+}
+
+.lobby-list li {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 1.1rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 1.3rem;
+  background: #f2f4f8;
+  color: #222;
+  outline: none;
+  box-shadow: 0 1.5px 7px 0 rgba(0,0,0,0.03);
+  margin-bottom: 0.2rem;
+  transition: box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 0 2px #2563eb22;
+  background: #eef2fb;
+}
+
+button {
+  background: #5271ff;
+  color: #fff;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 1.05rem 2.2rem;
+  box-shadow: 0 2px 8px 0 rgba(82,113,255,0.10);
+  cursor: pointer;
+  transition: background 0.14s, box-shadow 0.18s, transform 0.09s;
+  margin-top: 0.2rem;
+}
+
+button:hover, button:focus {
+  background: #2563eb;
+  box-shadow: 0 4px 16px 0 rgba(37,99,235,0.09);
+  transform: translateY(-1px) scale(1.015);
+}
+
+.kick-btn {
+  background: #ff6363;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.37rem 1.1rem;
+  border-radius: 1rem;
+  box-shadow: none;
+  margin-left: 0.2rem;
+}
+.kick-btn:hover {
+  background: #b91c1c;
+}
+
+.host-label {
+  background: #fde68a;
+  color: #9a7a1d;
+  font-weight: bold;
+  border-radius: 0.7rem;
+  font-size: 0.95rem;
+  padding: 0.18rem 0.9rem;
+  margin-left: 0.45rem;
+  display: inline-block;
+}
+
+.settings-label {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.1rem;
+}
+
+.countdown {
+  font-size: 3.1rem;
+  font-weight: 700;
+  color: #5271ff;
+  text-shadow: 0 1.5px 0 #e6eaf4;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.role-imposter {
+  color: #f43f5e;
+  background: #fff1f4;
+  font-weight: 700;
+  font-size: 1.45rem;
+  padding: 1.1rem 2.5rem;
+  border-radius: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.role-word {
+  color: #10b981;
+  background: #e0f7f0;
+  font-weight: 700;
+  font-size: 1.45rem;
+  padding: 1.1rem 2.5rem;
+  border-radius: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.card {
+  margin-top: 1.5rem;
+  width: 100%;
+  background: #eceffd;
+  color: #3d56a3;
+  font-weight: 600;
+  border-radius: 1.5rem;
+  border: none;
+  font-size: 1.11rem;
+  padding: 1.1rem 0;
+  box-shadow: 0 0.7px 2px 0 #7c91bc33;
+}
+
+.card:hover {
+  background: #dbeafe;
+}
+
+@media (max-width: 600px) {
+  .main-card {
+    min-height: unset;
+    margin: 0;
+    border-radius: 0;
+    padding: 1.1rem 0.7rem;
+    max-width: 100vw;
+  }
+  .card, button, input, select {
+    font-size: 1.06rem;
+    padding: 1.05rem 0.4rem;
+    width: 100%;
+    border-radius: 1.2rem;
+  }
+  .lobby-form, .lobby-list, .settings-form {
+    gap: 1.01rem;
+  }
+}
