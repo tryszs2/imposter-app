@@ -4,8 +4,8 @@ import "./MultiSelectDropdown.css";
 
 export default function MultiSelectDropdown({
   label,
-  options,
-  selected,
+  options = [],          // <- Fallback damit options NIE undefined ist!
+  selected = [],
   onChange
 }) {
   const [open, setOpen] = useState(false);
@@ -31,7 +31,7 @@ export default function MultiSelectDropdown({
     } else {
       arr.push(opt);
     }
-    if (arr.length === 0) arr = [options[0]];
+    if (arr.length === 0 && options.length > 0) arr = [options[0]];
     onChange(arr);
   };
 
